@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: aura-ai
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: node dist/server/entry.mjs
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://harsh0009111_db_user:7qQsOcK0mdp1Khil@cluster0.8rzwoca.mongodb.net/?appName=Cluster0
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 4321
